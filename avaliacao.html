@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="avaliacao.css">
+    <title>Avaliação</title>
+</head>
+<body>
+    <h2>Deixe sua Avaliação</h2>
+    <form method="POST" action="processa_avaliacao.php">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="estrelas">Avaliação (1 a 5 estrelas):</label>
+        <div class="star-rating">
+            <input type="radio" id="star5" name="estrelas" value="5" required>
+            <label class="star" for="star5">&#9733;</label>
+            <input type="radio" id="star4" name="estrelas" value="4">
+            <label class="star" for="star4">&#9733;</label>
+            <input type="radio" id="star3" name="estrelas" value="3">
+            <label class="star" for="star3">&#9733;</label>
+            <input type="radio" id="star2" name="estrelas" value="2">
+            <label class="star" for="star2">&#9733;</label>
+            <input type="radio" id="star1" name="estrelas" value="1">
+            <label class="star" for="star1">&#9733;</label>
+        </div>
+
+        <label for="comentario">Comentário:</label>
+        <textarea id="comentario" name="comentario" placeholder="Opcional"></textarea>
+
+        <button type="submit">Enviar Avaliação</button>
+    </form>
+</body>
+</html>

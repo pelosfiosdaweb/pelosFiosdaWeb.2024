@@ -1,0 +1,96 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+h2 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+form {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 0 auto;
+    transition: transform 0.3s;
+}
+
+form:hover {
+    transform: scale(1.02); /* Efeito de zoom ao passar o mouse */
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+.star-rating {
+    direction: rtl;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.star-rating input {
+    display: none; /* Esconde os botões de rádio padrão */
+}
+
+.star {
+    font-size: 40px; /* Aumenta o tamanho das estrelas */
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.star-rating input:checked ~ .star {
+    color: #f39c12; /* Cor das estrelas selecionadas */
+}
+
+.star:hover,
+.star:hover ~ .star {
+    color: #f39c12; /* Cor das estrelas ao passar o mouse */
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    height: 100px;
+    resize: none;
+    font-size: 16px;
+    transition: border 0.2s;
+}
+
+textarea:focus {
+    border-color: #f39c12; /* Cor da borda ao focar */
+    outline: none; /* Remove o contorno padrão */
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 12px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    width: 100%;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #218838;
+    transform: translateY(-2px); /* Efeito de elevação ao passar o mouse */
+}

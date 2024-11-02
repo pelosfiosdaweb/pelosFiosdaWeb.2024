@@ -1,0 +1,14 @@
+#about {
+    padding: 40px;
+    background-color: #f4f4f4;
+    text-align: center; /* Centraliza o texto */
+}
+
+#about h2 {
+    margin-bottom: 20px;
+}
+
+#about p {
+    margin: 10px 0;
+    line-height: 1.6; /* Aumenta o espaçamento entre as linhas */
+}
