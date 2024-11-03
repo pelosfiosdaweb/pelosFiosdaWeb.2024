@@ -11,8 +11,8 @@ body {
     color: #333;
 }
 
-header {
-    display: center;
+ header {
+   display: center;
     justify-content: space-between;
     align-items: center;
     padding: 20px 50px;
@@ -21,8 +21,9 @@ header {
 }
 
 .logo h1 {
-    font-size: 24px;
-    color: red;
+    font-size: 36px;
+    text-align: center;
+    margin: 0;
 }
 
 .logo .red {
@@ -38,21 +39,32 @@ header {
 .logo .blue {
     color: blue; /* Cor da letra H */
 }
+
+nav{
+    display: flex;
+    justify-content: center;
+}
+
 nav ul {
     list-style: none;
     display: flex;
     gap: 20px;
+    align-items: center;
+    justify-content: center;
 }
 
 nav ul li a {
-    color: #fff;
+    color: white;
     text-decoration: none;
     font-size: 16px;
-    transition: color 0.3s ease;
+    padding: 6px 16px; 
+    border-radius: 5px; 
+    transition: all 0.3s ease; 
 }
 
 nav ul li a:hover {
-    color: #FFD700; /* Cor de destaque no hover */
+    background-color: #FFD700;
+    color: black; 
 }
 
 .auth-buttons {
@@ -200,7 +212,8 @@ main {
     background-color: #868686; /* Cor mais escura ao passar o mouse */
 }
 
-/*avaliações*/
+
+/*Avaliações*/
 
 .review-btn {
     background-color: hsl(0, 0%, 51%); /*Cor de destaque */
@@ -214,3 +227,9 @@ main {
 .review-btn:hover {
     background-color: hsl(0, 0%, 51%); /*Cor ao passar o mouse*/
 }
+
+
+
+
+
+
