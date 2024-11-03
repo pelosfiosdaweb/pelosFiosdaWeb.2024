@@ -9,9 +9,10 @@
 <body>
     <h2>Deixe sua Avaliação</h2>
     <form method="POST" action="processa_avaliacao.php">
+        
         <label for="nome">Nome:</label>
         <input type="text" id="nome" name="nome" required>
-
+       
         <label for="estrelas">Avaliação (1 a 5 estrelas):</label>
         <div class="star-rating">
             <input type="radio" id="star5" name="estrelas" value="5" required>
@@ -31,5 +32,6 @@
 
         <button type="submit">Enviar Avaliação</button>
     </form>
+    <button onclick="window.location.href='index.html'">Voltar para o Início</button>
 </body>
 </html>
