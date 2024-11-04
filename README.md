@@ -1,2 +1,1 @@
-# pelosFiosdaWeb.2024
-# pelosFiosdaWeb.2024
+# Projeto da disciplina de Desenvolvimento Web em Html5, Css, Javascript e Php
