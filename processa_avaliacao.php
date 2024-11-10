@@ -13,7 +13,7 @@ if ($conn->connect_error) {
     die("Conexão falhou: " . $conn->connect_error);
 }
 
-// Verifica se o formulário foi enviado
+// Verifica se a avaliação foi enviada
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nome = $_POST['nome'];
     $estrelas = $_POST['estrelas'];
