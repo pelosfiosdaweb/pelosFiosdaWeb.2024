@@ -20,17 +20,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $comentario = $_POST['comentario'];
 
     // Prepara e executa a inserção
-    $stmt = $conn->prepare("INSERT INTO avaliacoes (nome, estrelas, comentario) VALUES (?, ?, ?)");
-    $stmt->bind_param("sis", $nome, $estrelas, $comentario);
+    $query = $conn->prepare("INSERT INTO avaliacoes (nome, estrelas, comentario) VALUES (?, ?, ?)");
+    $query->bind_param("sis", $nome, $estrelas, $comentario);
 
     // Verifica se a inserção foi bem-sucedida
-    if ($stmt->execute()) {
+    if ($query->execute()) {
         echo "Obrigado pela sua avaliação!";
     } else {
-        echo "Erro ao enviar a avaliação: " . $stmt->error;
+        echo "Erro ao enviar a avaliação: " . $query->error;
     }
 
-    $stmt->close();
+    $query->close();
     $conn->close();
 }
 ?>
