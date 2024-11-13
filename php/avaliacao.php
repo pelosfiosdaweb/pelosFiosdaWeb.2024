@@ -1,3 +1,23 @@
+<?php
+include "config.php";
+include "funcoes_db.php";
+
+// Cria a conexão
+$conn = conectaDb($servername, $username, $password, $dbname);
+
+// Verifica se a avaliação foi enviada
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $nome = $_POST['nome'];
+    $estrelas = $_POST['estrelas'];
+    $comentario = $_POST['comentario'];
+
+    $avaliacao = insereAvaliacao($conn, $nome, $estrelas, $comentario);
+}
+$conn->close();
+
+    
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -8,7 +28,7 @@
 </head>
 <body>
     <h2>Deixe sua Avaliação</h2>
-    <form method="POST" action="php/processa_avaliacao.php">
+    <form method="POST" action="./avaliacao.php">
         
         <label for="nome">Nome:</label>
         <input type="text" id="nome" name="nome" required>
