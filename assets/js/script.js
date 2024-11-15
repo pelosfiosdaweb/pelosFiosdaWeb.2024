@@ -1,34 +1,34 @@
-const services = [
-    { name: "Máquina Simples", price: "R$ 13,00" },
-    { name: "Máquina e Tesoura", price: "R$ 20,00" },
-    { name: "Degradê", price: "R$ 20,00" },
-    { name: "Tesoura", price: "R$ 25,00" },
-    { name: "Navalhado", price: "R$ 25,00" },
-    { name: "Corte Infantil", price: "R$ 25,00" },
-    { name: "Barba Simples", price: "R$ 13,00" },
-    { name: "Barba Modelada", price: "R$ 15,00" },
-    { name: "Pigmentação", price: "R$ 13,00" },
-    { name: "Só Pé", price: "R$ 5,00" },
-    { name: "Sombrancelha Masculina", price: "R$ 5,00" },
-    { name: "Sombrancelha Feminina", price: "R$ 10,00" },
-    { name: "Corte Feminino (Curto)", price: "R$ 30,00" }
+const servicos = [
+    { nome: "Máquina Simples", preco: "R$ 13,00" },
+    { nome: "Máquina e Tesoura", preco: "R$ 20,00" },
+    { nome: "Degradê", preco: "R$ 20,00" },
+    { nome: "Tesoura", preco: "R$ 25,00" },
+    { nome: "Navalhado", preco: "R$ 25,00" },
+    { nome: "Corte Infantil", preco: "R$ 25,00" },
+    { nome: "Barba Simples", preco: "R$ 13,00" },
+    { nome: "Barba Modelada", preco: "R$ 15,00" },
+    { nome: "Pigmentação", preco: "R$ 13,00" },
+    { nome: "Só Pé", preco: "R$ 5,00" },
+    { nome: "Sombrancelha Masculina", preco: "R$ 5,00" },
+    { nome: "Sombrancelha Feminina", preco: "R$ 10,00" },
+    { nome: "Corte Feminino (Curto)", preco: "R$ 30,00" }
 ];
 
-const showPricesButton = document.getElementById('showPrices');
-const serviceDetails = document.getElementById('serviceDetails');
-const pricesList = document.getElementById('pricesList');
+const mostrarPrecoButton = document.getElementById('mostrarPreco');
+const servicoDetalhes = document.getElementById('servicoDetalhes');
+const precosLista = document.getElementById('precosLista');
 
-showPricesButton.addEventListener('click', function(event) {
+mostrarPrecoButton.addEventListener('click', function(event) {
     event.preventDefault(); // Impede o comportamento padrão do link
-    if (serviceDetails.style.display === 'block') {
-        serviceDetails.style.display = 'none'; // Fecha o menu
+    if (servicoDetalhes.style.display === 'block') {
+        servicoDetalhes.style.display = 'none'; // Fecha o menu
     } else {
-        serviceDetails.style.display = 'block'; // Abre o menu
-        pricesList.innerHTML = ''; // Limpa a lista de preços antes de preencher
-        services.forEach(service => {
-            const priceItem = document.createElement('p');
-            priceItem.textContent = `${service.name}: ${service.price}`;
-            pricesList.appendChild(priceItem);
+        servicoDetalhes.style.display = 'block'; // Abre o menu
+        precosLista.innerHTML = ''; // Limpa a lista de preços antes de preencher
+        servicos.forEach(servico => {
+            const precoItem = document.createElement('p');
+            precoItem.textContent = `${servico.nome}: ${servico.preco}`;
+            precosLista.appendChild(precoItem);
         });
     }
 });
