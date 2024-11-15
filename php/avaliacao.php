@@ -5,16 +5,17 @@ include "funcoes_db.php";
 // Cria a conexão
 $conn = conectaDb($servername, $username, $password, $dbname);
 
+$mensagem = ''; 
+
 // Verifica se a avaliação foi enviada
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nome = $_POST['nome'];
     $estrelas = $_POST['estrelas'];
     $comentario = $_POST['comentario'];
 
-    $avaliacao = insereAvaliacao($conn, $nome, $estrelas, $comentario);
+    $mensagem = insereAvaliacao($conn, $nome, $estrelas, $comentario);
 }
 $conn->close();
-
     
 ?>
 
@@ -28,10 +29,13 @@ $conn->close();
 </head>
 <body>
     <h2>Deixe sua Avaliação</h2>
-    <form method="POST" action="./avaliacao.php">
+    <form method="POST" action="avaliacao.php">
         
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="nome" required>
+        <div class="form-group">
+            <label for="nome">Nome: </label>
+            <input type="text" id="nome" name="nome" required>
+        </div>
+
        
         <label for="estrelas">Avaliação (1 a 5 estrelas):</label>
         <div class="star-rating">
@@ -52,6 +56,16 @@ $conn->close();
 
         <button type="submit">Enviar Avaliação</button>
     </form>
-    <button onclick="window.location.href='index.html'">Voltar para o Início</button>
+
+    <h2>Avaliações Recentes</h2>
+    <div class="avaliacoes">
+        <?php
+        // Reabre a conexão para exibir as avaliações
+        $conn = conectaDb($servername, $username, $password, $dbname);
+        exibirAvaliacoes($conn);
+        $conn->close();
+        ?>
+    </div>
+    <a href="../index.html"><button>Voltar</button></a>
 </body>
 </html>
