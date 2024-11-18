@@ -19,7 +19,7 @@ const servicoDetalhes = document.getElementById('servicoDetalhes');
 const precosLista = document.getElementById('precosLista');
 
 mostrarPrecoButton.addEventListener('click', function(event) {
-    event.preventDefault(); // Impede o comportamento padrão do link
+    event.preventDefault(); 
     if (servicoDetalhes.style.display === 'block') {
         servicoDetalhes.style.display = 'none'; // Fecha o menu
     } else {
