@@ -41,7 +41,7 @@ label {
 }
 
 .star-rating input {
-    display: none; /* Esconde os botões de rádio padrão */
+    display: none; 
 }
 
 .star {

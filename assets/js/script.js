@@ -9,8 +9,8 @@ const servicos = [
     { nome: "Barba Modelada", preco: "R$ 15,00" },
     { nome: "Pigmentação", preco: "R$ 13,00" },
     { nome: "Só Pé", preco: "R$ 5,00" },
-    { nome: "Sombrancelha Masculina", preco: "R$ 5,00" },
-    { nome: "Sombrancelha Feminina", preco: "R$ 10,00" },
+    { nome: "Sobrancelha Masculina", preco: "R$ 5,00" },
+    { nome: "Sobrancelha Feminina", preco: "R$ 10,00" },
     { nome: "Corte Feminino (Curto)", preco: "R$ 30,00" }
 ];
 
